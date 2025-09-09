@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="راقب غيابك بأسلوب لم تره من قبل."
+	<meta name="description" content="راقب غيابك بأسلوب لم تره من قبل.">
 	<meta name="theme-color" content="#0a0a0a">
 	<title>حاسبة الغياب</title>
     <link id="favicon" rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSI5MCIgZmlsbD0iIzBhMGEwYSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY0IDApIj48cmVjdCB4PSI2NCIgeT0iNDgiIHdpZHRoPSIzODQiIGhlaWdodD0iNDE2IiByeD0iNDAiIGZpbGw9IiMyMjI1MmQiLz48cmVjdCB4PSI5NiIgeT0iODAiIHdpZHRoPSIzMjAiIGhlaWdodD0iOTYiIHJ4PSIyMCIgZmlsbD0iIzVlOWNmZiIvPjxnIGZpbGw9IiM0YjUwNWEiPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjI0MCIgcj0iMzIiLz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNDAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIzNjIiIGN5PSIyNDAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIxNTAiIGN5PSIzMzAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIyNTYiIGN5PSIzMzAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIzNjIiIGN5PSIzMzAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIxNTAiIGN5PSI0MjAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIyNTYiIGN5PSI0MjAiIHI9IjMyIi8%2BY2lyY2xlIGN4PSIzNjIiIGN5PSI0MjAiIHI9IjMyIi8%2BPC9nPjwvZz48L3N2Zz4%3D">
@@ -19,7 +19,7 @@
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap");
-		:root{--color-primary:#5e9cff;--color-primary-dark:#4b7dcc;--color-danger-red:#ff5252;--color-warning-gold:#ffc400;--color-save-green:#00c853;--color-bg:#0a0a0a;--color-card:rgba(20,20,22,0.75);--color-border:rgba(255,255,255,0.1);--color-text:#e0e0e0;--color-text-muted:#999;--font-body:"Cairo",sans-serif;--font-title:"IBM Plex Sans Arabic",sans-serif;--radius:20px;--radius-md:16px;--radius-full:999px;--transition:0.3s cubic-bezier(0.25,0.8,0.25,1);--transition-smooth:0.5s cubic-bezier(0.2,0.8,0.2,1);--rgb-primary:94,156,255;--rgb-warning:255,196,0;--rgb-danger:255,82,82;--primary-hue:217;--secondary-hue:257;}
+		:root{--color-primary:#5e9cff;--color-primary-dark:#4b7dcc;--color-danger-red:#ff5252;--color-warning-gold:#ffc400;--color-save-green:#00c853;--color-bg:#0a0a0a;--color-card:rgba(20,20,22,0.75);--color-border:rgba(255,255,255,0.1);--color-text:#e0e0e0;--color-text-muted:#999;--font-body:"Cairo",sans-serif;--font-title:"IBM Plex Sans Arabic",sans-serif;--radius:20px;--radius-md:16px;--radius-full:999px;--transition:0.3s cubic-bezier(0.25,0.8,0.25,1);--transition-smooth:0.5s cubic-bezier(0.2,0.8,0.2,1);--rgb-primary:94,156,255;--rgb-warning:255,196,0;--rgb-danger:255,82,82;--rgb-save:0,200,83;--primary-hue:217;--secondary-hue:257;}
 		* {
 			margin:0;
 			padding:0;
@@ -400,6 +400,32 @@
 		.denial-text-content{flex-grow: 1;}
 		.denial-title{font-family:var(--font-title);font-weight:700;color:#fff;font-size:1.2rem;margin:0;line-height:1.2;transition:color var(--transition-smooth);}
 		.denial-subtitle{font-size:.9rem;color:var(--color-text-muted);margin-top:.15rem;display: block;transition: color var(--transition-smooth);}
+		
+		.bonus-message {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			padding: 0.75rem 1rem;
+			border-radius: var(--radius-full);
+			margin-top: 1rem;
+			font-size: 0.9rem;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border: 1px solid transparent;
+			box-shadow: 0 4px 15px -5px rgba(var(--rgb-status), 0.2);
+		}
+		.bonus-message.active {
+			--rgb-status: var(--rgb-save);
+			background: rgba(var(--rgb-status), 0.1);
+			border-color: rgba(var(--rgb-status), 0.2);
+			color: var(--color-save-green);
+		}
+		.bonus-message.lost {
+			--rgb-status: var(--rgb-warning);
+			background: rgba(var(--rgb-warning), 0.1);
+			border-color: rgba(var(--rgb-warning), 0.2);
+			color: var(--color-warning-gold);
+		}
 
 		.empty-list-message{text-align:center;padding:3rem 2rem;color:var(--color-text-muted);border:2px dashed var(--color-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;gap:1.5rem; transition: border-color var(--transition-smooth), color var(--transition-smooth);}
 		.empty-list-message svg{font-size:4rem;color:var(--color-primary);opacity:0.5}
@@ -645,6 +671,8 @@
 		.light-mode .result-section { background: radial-gradient(circle,rgba(var(--rgb-status,var(--rgb-primary)),0.07) 0%,transparent 70%), var(--color-card); }
 		.light-mode .predictive-text {background: rgba(var(--rgb-status, var(--rgb-primary)), 0.08);border-color: rgba(var(--rgb-status, var(--rgb-primary)), 0.15);}
 		.light-mode .denial-message {background: rgba(var(--rgb-danger), 0.08);border-color: rgba(var(--rgb-danger), 0.15);}
+		.light-mode .bonus-message.active { background: rgba(var(--rgb-save), 0.1); border-color: rgba(var(--rgb-save), 0.2); }
+    	.light-mode .bonus-message.lost { background: rgba(var(--rgb-warning), 0.1); border-color: rgba(var(--rgb-warning), 0.2); }
 		.light-mode .recommendation-message {box-shadow: 0 4px 20px -5px rgba(var(--rgb-status), 0.3);}
 		.light-mode .recommendation-message.correct {background: rgba(var(--rgb-primary), 0.1);border-color: rgba(var(--rgb-primary), 0.2);}
         .light-mode .recommendation-message.warning {background: rgba(var(--rgb-warning), 0.1);border-color: rgba(var(--rgb-warning), 0.2);}
@@ -740,14 +768,16 @@
 			CheckCircle: props => <SvgIcon d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" {...props} />,
 			Download: props => <SvgIcon d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" {...props} />,
 			ShieldCheck: props => <SvgIcon d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" {...props} />,
+			Star: props => <SvgIcon d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" {...props} />,
+			XCircle: props => <SvgIcon d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11.59L15.59 15 12 11.41 8.41 15 7 13.59 10.59 10 7 6.41 8.41 5 12 8.59 15.59 5 17 6.41 13.41 10 17 13.59z" {...props} />,
 		};
 
         const CONSTANTS = { 
 			DENIAL_PERCENTAGE: 0.25, 
 			MIN_WEEKS: 7, 
 			MAX_WEEKS: 20,
-			RECOMMENDED_WEEKS: 7,
-			RECOMMENDED_SEMESTER_NAME: "465"
+			RECOMMENDED_WEEKS: 17,
+			RECOMMENDED_SEMESTER_NAME: "471"
 		};
 		const PRESET_THEMES = {
 			blue: '#5e9cff',
@@ -1091,12 +1121,14 @@
 				const remaining = denial - absenceNum;
 				const { name: status, isDenied } = getCourseStatus({ absenceHours: absenceNum, lectureHours }, semesterWeeks);
 				
+				const hasBonus = percentage <= 5.0;
+
 				let predictiveText = "";
 				if (!isDenied) {
 					predictiveText = `أنت على بعد ${formatRemainingHoursText(remaining)} من الحرمان.`;
 				}
 				
-				return { percentage, status, predictiveText, allowed, denial, isDenied };
+				return { percentage, status, predictiveText, allowed, denial, isDenied, hasBonus };
 			}, [lectureHours, absenceHours, semesterWeeks]);
 
 			const handleSubmit = (e) => {
@@ -1335,6 +1367,7 @@
 							<div className="result-details">
 								<div className="detail-item"><span>الغياب المسموح</span><strong>{formatRemainingHoursText(result.allowed)}</strong></div>
 								<div className="detail-item"><span>الحرمان</span><strong>{formatRemainingHoursText(result.denial)}</strong></div>
+								
 								{result.isDenied ? (
 									<div className="denial-message">
 										<Icons.WarningCircle className="denial-icon" />
@@ -1343,7 +1376,24 @@
 											<span className="denial-subtitle">لقد تجاوزت الحد الأقصى للغياب.</span>
 										</div>
 									</div>
-								) : (<div className="predictive-text">{result.predictiveText}</div>)}
+								) : (
+									<div className="predictive-text">{result.predictiveText}</div>
+								)}
+
+								{parseInt(absenceHours, 10) >= 0 && !result.isDenied && (
+									result.hasBonus ? (
+										<div className="bonus-message active">
+											<Icons.Star />
+											<span>لديك بونص الحضور! حافظ على غيابك أقل من 5%.</span>
+										</div>
+									) : (
+										<div className="bonus-message lost">
+											<Icons.XCircle />
+											<span>لقد فقدت بونص الحضور لتجاوزك نسبة 5%.</span>
+										</div>
+									)
+								)}
+
 							</div>
 						</div>
 					</>)}
@@ -1624,7 +1674,7 @@
 									{semesterWeeks === CONSTANTS.RECOMMENDED_WEEKS ? (
 										<div className="recommendation-message correct">
 											<Icons.CheckCircle />
-											<span>هذا هو العدد المتوقع للصيفي {CONSTANTS.RECOMMENDED_SEMESTER_NAME}</span>
+											<span>هذا هو العدد المتوقع للترم {CONSTANTS.RECOMMENDED_SEMESTER_NAME}</span>
 										</div>
 									) : (
 										<div className="recommendation-message warning">
