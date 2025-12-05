@@ -29,7 +29,7 @@
 		html{
 			scroll-behavior:smooth;
 			scrollbar-gutter: stable;
-			scrollbar-width: none; /* Hide scrollbar for Firefox */
+			scrollbar-width: none;
 		}
 		body.modal-open { 
             overflow: hidden !important;
@@ -38,7 +38,6 @@
 			overflow-y: hidden !important;
 		}
 
-		/* Hide scrollbars for all browsers */
 		::-webkit-scrollbar {
 			display: none;
 		}
@@ -55,7 +54,7 @@
 		*:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:6px}
         .swal-popup-animation-in { animation: swal-scale-in 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 		.swal-popup-animation-out { animation: swal-scale-out 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; }
-		body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);direction:rtl;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; transition: background-color var(--transition-smooth), color var(--transition-smooth); -ms-overflow-style: none; /* Hide scrollbar for IE & Edge */}
+		body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);direction:rtl;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; transition: background-color var(--transition-smooth), color var(--transition-smooth); -ms-overflow-style: none; }
 		
         .cosmic-bg-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden}
 		#starfield-canvas{position:absolute;top:0;left:0;width:100%;height:100%}
@@ -213,7 +212,6 @@
 		
 		.course-list{display:flex;flex-direction:column;gap:1rem}
 		
-		/* --- START: Final Professional Styling --- */
 		.course-item {
 			display: flex;
 			flex-direction: column;
@@ -287,8 +285,7 @@
 		.quick-add-btn { background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.8rem; font-weight: bold; cursor: pointer; border-radius: 6px; padding: 0.2rem 0.6rem; transition: all var(--transition); user-select: none; }
 		.quick-add-btn:hover { background-color: rgba(var(--rgb-primary), 0.2); border-color: var(--color-primary); color: var(--color-primary); transform: scale(1.05); }
 		.quick-add-btn:active { transform: scale(0.95); }
-		/* --- END: Final Professional Styling --- */
-
+		
 		.footer{text-align:center;color:var(--color-text-muted);font-size:1rem;display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid var(--color-border);animation:fadeInUp .8s var(--transition-smooth) .8s both; transition: color var(--transition-smooth), border-color var(--transition-smooth);}
 		.footer-controls{display:flex;align-items:center;gap:0.5rem;}
 		.footer-link-text{color:var(--color-text-muted);transition:color var(--transition);text-decoration:none;font-size:1rem;}
@@ -406,7 +403,6 @@
 		.empty-list-message h3 { font-family: var(--font-title); font-size: 1.4rem; color: var(--color-text); transition: color var(--transition-smooth); }
 		.empty-list-message p { font-size: 1rem; max-width: 300px; line-height: 1.7; }
 		
-		/* --- START: Absence Table Modal --- */
 		.swal-table-container {
             max-height: 45vh;
             overflow-y: auto;
@@ -458,9 +454,7 @@
         .swal-popup-table-compact {
             padding-bottom: 1.5rem !important;
         }
-		/* --- END: Absence Table Modal --- */
 		
-		/* --- START: CSS Changes for compact explanation modal --- */
 		.swal-popup.swal-popup-explanation-compact {
             padding-top: 1.25rem !important;
             padding-bottom: 1.5rem !important;
@@ -478,7 +472,6 @@
         .swal-popup-explanation-compact .swal-explanation-content .swal-tip {
             margin-top: 1.25rem;
         }
-		/* --- END: CSS Changes --- */
         .swal-explanation-content { text-align: right; line-height: 1.8; font-size: 1rem; }
         .swal-explanation-content p { margin: 0 0 1rem 0; }
         .swal-explanation-content h4 { font-family: var(--font-title); font-size: 1.1rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.6rem; }
@@ -506,7 +499,6 @@
 		.swal2-confirm:focus{box-shadow:0 0 0 3px rgba(var(--rgb-primary),0.5)!important}
 		.swal2-cancel{background:rgba(255,255,255,0.1)!important;color:var(--color-text)!important;border-radius:var(--radius-full)!important;padding:.6rem 1.5rem!important;font-family:var(--font-body)!important; transition: background-color var(--transition-smooth), color var(--transition-smooth) !important;}
 		
-		/* START: Toast Improvement */
 		.swal2-toast {
 			border-radius: var(--radius-md) !important;
 			border: 1px solid var(--color-border) !important;
@@ -537,7 +529,6 @@
 		.swal2-icon.swal2-warning .swal2-icon-content {
 			font-size: 2.2rem !important;
 		}
-		/* END: Toast Improvement */
 
 		.swal2-timer-progress-bar { background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)); height: 4px !important; }
 		.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; animation: fadeIn .3s ease forwards; transition: background-color var(--transition-smooth); }
@@ -546,7 +537,6 @@
 		.modal-close-btn:hover { color: #fff; transform: rotate(90deg); }
 		.modal-header { font-family: var(--font-title); font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); transition: color var(--transition-smooth), border-color var(--transition-smooth); }
 		
-		/* --- START: Settings Layout - Clean & Simple --- */
 		.settings-content { display: flex; flex-direction: column; gap: 1rem; text-align: right; }
 		.settings-section { display: flex; flex-direction: column; gap: 1rem; }
 		.settings-section-title { font-family: var(--font-title); font-size: 1.2rem; color: var(--color-primary); margin-bottom: 0; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border); transition: color var(--transition-smooth), border-color var(--transition-smooth); }
@@ -574,7 +564,6 @@
 		.data-management-zone .settings-item { flex-direction: column; align-items: flex-start; }
 		.data-management-zone-btn { align-self: flex-end; margin-top: 0.5rem; background: transparent; color: var(--color-danger-red); border: 1px solid rgba(var(--rgb-danger), 0.5); padding: 0.6rem 1.2rem; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
 		.data-management-zone-btn:hover { background: rgba(var(--rgb-danger), 0.2); color: #fff; border-color: var(--color-danger-red); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(var(--rgb-danger), 0.2); }
-		/* --- END: Settings Layout --- */
 		
 		.recommendation-message {
 			--rgb-status: var(--rgb-primary);
@@ -840,7 +829,6 @@
 			return h;
 		};
 
-		// -->> تم تحديث هذه الدالة لتقبل الأرقام العشرية <<--
 		const formatRemainingHoursText = (hours) => {
 			if (hours <= 0) return "0 ساعات";
 
@@ -1092,7 +1080,7 @@
 			const { name, lectureHours, absenceHours } = courseData;
 
 			const result = useMemo(() => {
-				const absenceNum = Number(absenceHours) || 0; // Use Number() to handle floats
+				const absenceNum = Number(absenceHours) || 0;
 				const total = semesterWeeks * lectureHours;
 				const allowed = Math.floor(total * CONSTANTS.DENIAL_PERCENTAGE);
 				const denial = allowed + 1;
@@ -1331,7 +1319,6 @@
 							<label>ساعات الغياب الحالية</label>
 							<div className="absence-control">
 								<button type="button" onClick={() => changeAbsence(1)}><Icons.ChevronRight /></button>
-								{/* -->> تم إضافة step="0.25" هنا <<-- */}
 								<input type="number" value={absenceHours} step="0.25" onChange={e => onCourseDataChange({ absenceHours: e.target.value })} placeholder="0" min="0" />
 								<button type="button" onClick={() => changeAbsence(-1)}><Icons.ChevronLeft /></button>
 							</div>
@@ -1414,7 +1401,6 @@
 				return () => window.removeEventListener('beforeinstallprompt', handler);
 			}, []);
 			
-			// This effect runs once on mount to force update semester weeks for all users.
 			useEffect(() => {
 				setSemesterWeeks(CONSTANTS.RECOMMENDED_WEEKS);
 			}, []);
@@ -1450,7 +1436,7 @@
 					...courseDataFromForm,
 					id: courseDataFromForm.id || Date.now(),
 					lastUpdated: Date.now(),
-					absenceHours: Number(courseDataFromForm.absenceHours) || 0 // Use Number() to save float
+					absenceHours: Number(courseDataFromForm.absenceHours) || 0
 				};
 
 				if (index > -1) { 
@@ -1710,7 +1696,6 @@
 	</script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // -->> تم تحديث هذا السكربت بالكامل لخلفية أجمل وثابتة <<--
         const initCosmicEffects = () => {
             const canvas = document.getElementById('starfield-canvas'); if (!canvas) return;
             const ctx = canvas.getContext('2d');
@@ -1737,7 +1722,6 @@
                     this.vy = (Math.random() - 0.5) * this.config.speed;
                 }
                 draw() {
-                    // Twinkling effect
                     if (Math.random() > 0.99) {
                          this.alpha += this.alphaChange; 
                         if (this.alpha >= this.maxAlpha || this.alpha <= 0) this.alphaChange *= -1; 
@@ -1756,7 +1740,6 @@
                     this.x += this.vx;
                     this.y += this.vy; 
 
-                    // Boundary checks for wrapping
 					if (this.x > canvas.width + this.radius) this.x = -this.radius;
 					if (this.x < -this.radius) this.x = canvas.width + this.radius;
                     if (this.y > canvas.height + this.radius) this.y = -this.radius;
@@ -1772,9 +1755,9 @@
                 layers = [];
                 shootingStars = [];
                 const layerConfigs = [
-                    { speed: 0.05, maxSize: 0.8, minSize: 0.2, count: Math.floor(canvas.width / 8) }, // Far, slow, tiny stars
-                    { speed: 0.1, maxSize: 1.2, minSize: 0.3, count: Math.floor(canvas.width / 15) }, // Mid, medium stars
-                    { speed: 0.15, maxSize: 1.5, minSize: 0.5, count: Math.floor(canvas.width / 35) } // Near, larger stars
+                    { speed: 0.05, maxSize: 0.8, minSize: 0.2, count: Math.floor(canvas.width / 8) },
+                    { speed: 0.1, maxSize: 1.2, minSize: 0.3, count: Math.floor(canvas.width / 15) },
+                    { speed: 0.15, maxSize: 1.5, minSize: 0.5, count: Math.floor(canvas.width / 35) }
                 ];
 
                 layerConfigs.forEach(config => {
@@ -1797,7 +1780,6 @@
                 shootingStars.forEach(s => { s.update(); s.draw(); });
             }
 
-            // Remove scroll listener completely to make background static relative to scroll.
             window.addEventListener('resize', () => { 
                 resizeCanvas(); 
                 initStars(); 
